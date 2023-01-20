@@ -12,17 +12,19 @@
     width: 295px;
     background-color: #EDB111;
     box-shadow: 25px 24px 30px 5px rgba(0,0,0,0.47);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 .top-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px black solid;
     height: 50%;
     width: 100%;
 }
 
-.letters-container {
+.screen-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,17 +32,118 @@
     height: 85%;
     width: 85%;
     background-color: #2C332E;
+    border-radius: 15px;
 }
 
-.screen-container {
-    margin: auto;
-    height: 144px;
-    width: 160px;
-    background-color: #6B7767;
+/* Parte del bottom de la pantalla curva añadida */
+
+.screen-container::after {
+    content: '';
+    position: absolute;
+    top: calc(100% - 40px);
+    height: 30px;
+    width: 83%;
+    border-radius: 50%;
+    background-color: #2C332E;
+    
 }
+
+/* Elementos de la luz de encendido */
+
+.power-container {
+    position: absolute;
+    top: 75px;
+    left: 26px;
+    width: 45px;
+    height:50px;    
+}
+
+.top-power-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height:40%;
+}
+
+#power-light {
+    background-color: red;
+    border-radius: 50%;
+    width: 9px;
+    height:9px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 1px rgba(220, 8, 8, 0.929); 
+    z-index: 3;
+    /* box shadow activarse al encender la consola? */
+}
+
+.power-halfmoons-container {
+    display: flex;
+    align-items: center;
+    width: 27px;
+    height:9px;
+}
+.halfmoon-1 {
+    z-index: 2;
+}
+
+.halfmoon-2 {
+    z-index: 1;
+}
+
+.halfmoon-3 {
+    z-index: 0;
+}
+
+.halfmoons {
+    border-radius: 50%;
+    width: 9px;
+    height:9px;
+    position:relative;
+    
+}
+.halfmoons::before {
+    content:'';
+    position: absolute;
+    left: 0;
+    background-color: rgb(177, 177, 177);
+    border-radius: 50%;
+    width: 9px;
+    height:9px;
+    
+} 
+.halfmoons::after {
+    content:'';
+    position: absolute;
+    left: -3px;
+    background-color: #2C332E;
+    border-radius: 50%;
+    width: 9px;
+    height:9px;
+    
+} 
+
+
+
+#power-letters p {
+    font-size: 0.7rem;
+    margin-top: 0;
+}
+
+
+
+
+
 
 .bottom-container {
     height: 50%;
     width: 100%;
     border: 1px black solid;
+}
+
+.display-container {
+    margin: auto;
+    height: 144px;
+    width: 160px;
+    background-color: #6B7767;
 }
