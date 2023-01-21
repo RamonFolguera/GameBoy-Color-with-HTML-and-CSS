@@ -128,14 +128,12 @@ body {
 
 
 #power-letters p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     margin-top: 0;
+    color:#67879a;
 }
 
-
-
-
-
+/* gameboycolor contiene toda el título GAMEBOYCOLOR y se divide en GAMEBOY y en COLOR. COLOR a su vez se divide en letras  */
 
 .gameboycolor-container {
     position: absolute;
@@ -192,15 +190,226 @@ body {
 }
 
 
-.bottom-container {
-    height: 50%;
-    width: 100%;
-    border: 1px black solid;
-}
+
 
 .display-container {
     margin: auto;
     height: 144px;
     width: 160px;
     background-color: #6B7767;
+}
+
+/* COMIENZO DE LA PARTE INFERIOR DE LA GAMEBOY */
+
+
+.bottom-container {
+    height: 50%;
+    width: 100%;
+}
+
+
+.top-section-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 50%;
+}
+
+
+.nintendoLabel-container {
+    border-radius: 50px;
+    border: 1px solid white;
+    
+}
+
+.nintendoLabel-container p {
+    margin: 2px 5px;
+}
+
+
+
+.controls-container {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.cross-container {
+    margin-left: 10px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+
+
+
+/* #cross path{
+    box-shadow: 2px 2px 2px 2px #2c313e;
+} */
+
+/* Para crear la sombra de la cruz */
+/* #cross {
+    position: absolute;
+    top:20px;
+    left:30px;
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+} */
+
+/* before y after para que las sombras queden por debajo */
+.cross-container::after {
+    content: '';
+    position:absolute;
+    top: 15px;
+    left: 30px;
+    width: 19px;
+    height: 60px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px 2px black, 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+
+
+.cross-container::before {
+    content: '';
+    position:absolute;
+    top: 35px;
+    left: 10px;
+    width: 60px;
+    height: 19px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px 2px black, 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+
+}
+
+
+
+#vertical-rect, #horizontal-rect, #center-circle {
+    position:absolute;
+    background-color: #2c313e;
+    
+}
+
+#vertical-rect, #horizontal-rect {
+    border-radius: 3px;
+    /* box-shadow: 0px 0px 0px 2px black; */
+}
+
+
+
+#vertical-rect {
+    top: 15px;
+    left: 30px;
+    width: 19px;
+    height: 60px;
+    z-index: 1;
+}
+
+#horizontal-rect {
+    top: 35px;
+    left: 10px;
+    width: 60px;
+    height: 19px;
+    z-index: 1;
+}
+
+#center-circle {
+    border: 1px solid rgba(220, 8, 8, 0.929);
+    top: 35px;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+
+
+.round-buttons-container {
+    position: relative;
+    width: 150px;
+    height:100px;
+    
+}
+
+#button-B, #button-A {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color:#2c313e;
+    box-shadow: 0px 0px 0px 2px black, 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+#button-B {
+    position: absolute;
+    top: 50px;
+    left:30px;
+}
+
+#button-A {
+    position: absolute;
+    top: 25px;
+    right:30px;
+}
+
+
+.bottom-section-container {
+    display:flex;
+    justify-content: flex-end;
+    border: 1px solid black;
+    height: 50%;
+}
+
+.select-start-container {
+    width: 33%;
+    height:100%;
+    border: 1px black solid;
+}
+
+.select-start-buttons-container {
+    width: 30%;
+    height:30%;
+    border: 1px black solid;
+}
+
+#select-button {
+    width: 30%;
+    height:30%;
+    border: 1px black solid;
+}
+
+#start-button {
+    width: 30%;
+    height:30%;
+    border: 1px black solid;
+}
+
+.select-start-titles-container {
+    width: 30%;
+    height:30%;
+    border: 1px black solid;
+}
+
+#select-title {
+    width: 30%;
+    height:30%;
+    border: 1px black solid;
+}
+
+#start-title {
+    width: 30%;
+    height:30%;
+    border: 1px black solid;
+}
+
+
+.grid-dots-container {
+    width: 33%;
+    height:100%;
+    border: 1px black solid;
 }

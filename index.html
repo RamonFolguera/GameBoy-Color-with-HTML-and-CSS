@@ -12,6 +12,8 @@
         <div class="top-container">
             <div class="screen-container">
 
+                <!-- Agrupo la parte del POWER en un container y lo subdivido en 3: la luz de encendido, las tres medias lunas y la palabra POWER -->
+                
                 <div class="power-container">
                     <div class="top-power-container">
                         <div id="power-light"></div>
@@ -26,6 +28,9 @@
                         <p>POWER</p>
                     </div>
                 </div>
+
+                <!-- gameboycolor contiene toda el título GAMEBOYCOLOR y se divide en GAMEBOY y en COLOR. COLOR a su vez se divide en letras   -->
+
                 <div class="gameboycolor-container">
                     <div class="gameboy-container">GAME BOY</div>
                     <div class="color-container">
@@ -37,6 +42,8 @@
                     </div>
                 </div>
 
+                <!-- DISPLAY es la parte del screen donde aparece el videojuego -->
+
                 <div class="display-container">
                     
 
@@ -46,9 +53,51 @@
 
 
         </div>
+
+        <!--  COMIENZO DE LA PARTE INFERIOR DE LA GAMEBOY -->
+
         <div class="bottom-container">
-            <div></div>
-            <div></div>
+            <div class="top-section-container">
+                <div class="nintendoLabel-container">
+                    <p>Nintendo</p> 
+                </div>
+                <div class="controls-container">
+                    <div class="cross-container">
+                        
+                        <!-- Intento de hacerlo con path -->
+                        
+                        <!-- <svg id="cross"  rx="5" ry="5 heigth="100" width="110" viewBox="0 0 200 200">
+                            <path fill="#2c313e" box-shadow="2px 2px 2px 2px #2c313e" d="M0 30 L30 30 L30 0 L70 0 L70 30 L100 30 L100 70 L70 70 L70 100 L30 100 L30 70 L0 70 Z" />
+                        </svg> -->
+                        <div id="vertical-rect"></div>
+                        <div id="horizontal-rect"></div>
+                        <div id="center-circle"></div>
+                    </div>
+                    <div class="round-buttons-container">
+                        <div id="button-B"></div>
+                        <div id="button-A"></div>
+                    </div>
+                </div>    
+            </div>
+
+            <div class="bottom-section-container">
+                <div class="select-start-container">
+                    <div class="select-start-buttons-container">
+                        <div id="select-button"></div>
+                        <div id="start-button"></div>
+                    </div>
+                    <div class="select-start-titles-container">
+                        <p id="select-title"></p>
+                        <p id="start-title"></p>
+                    </div>
+
+                </div>
+                <div class="grid-dots-container">
+
+
+
+                </div>
+            </div>
         </div>
     </div>
     
