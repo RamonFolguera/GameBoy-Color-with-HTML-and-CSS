@@ -2,7 +2,9 @@
     box-sizing: border-box;
 }
 
-
+body {
+    font-family: sans-serif;
+}
 
 .container {
     display: flex;
@@ -40,7 +42,7 @@
 .screen-container::after {
     content: '';
     position: absolute;
-    top: calc(100% - 40px);
+    top: 212.5px;
     height: 30px;
     width: 83%;
     border-radius: 50%;
@@ -133,6 +135,61 @@
 
 
 
+
+
+.gameboycolor-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 210px;
+    z-index:1;
+    width: 130px;
+}
+
+.gameboy-container {
+    font-weight: 900;
+    font-style: italic;
+    color:#67879a;
+    letter-spacing: -0.1rem;
+    
+}
+
+/* font-weight es solo hasta 900. Añado text stroke para hacer la letra de COLOR aún más gruesa */
+
+.color-container {
+    display: flex;
+    align-items: center;
+    font-family: "Comic Sans MS", "Comic Sans";
+    font-weight: 900;
+    -webkit-text-stroke: 1px;
+}
+
+#C {
+    color: #aa2058;
+}
+
+#O1 {
+    color:#605bd9;
+    transform: rotateZ(10deg);
+    transform: translateY(0.5px);
+    font-size: 0.85rem;
+}
+#L {
+    color: #78b930;
+    transform: rotateZ(-5deg);
+}
+
+#O2 {
+    color:#b6b524;
+    transform: rotateZ(10deg);
+    transform: translateY(0.5px);
+    font-size: 0.85rem;
+
+}
+#R {
+    color:#317aaf;
+}
 
 
 .bottom-container {
