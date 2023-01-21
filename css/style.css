@@ -26,7 +26,7 @@ body {
     height: 505px;
     width: 295px;
     background: var(--casin-base);
-    box-shadow: 0px -4px 0px #D6B304, 25px 24px 30px 5px rgba(0,0,0,0.47);
+    box-shadow:  25px 24px 30px 5px rgba(0,0,0,0.47);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     z-index: 2;
@@ -43,7 +43,7 @@ body {
     left:0.5px;
     border-radius: 50%;
     z-index: -1;
-    box-shadow:0px 4px 0px #715508;
+    box-shadow:0px 4px 0px #E8A705;
     border-bottom: 2px solid #fff5d9c9;
     overflow: hidden;
 
@@ -91,7 +91,7 @@ body {
 .power-container {
     position: absolute;
     top: 75px;
-    left: 26px;
+    left: 21px;
     width: 45px;
     height:50px;    
 }
@@ -185,16 +185,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 210px;
+    top: 208px;
     z-index:1;
-    width: 130px;
+    width: 144px;
 }
 
 .gameboy-container {
-    font-weight: 900;
-    font-style: italic;
+    font-weight: 700;
+    transform: skewX(-10deg);
     color:#67879a;
     letter-spacing: -0.1rem;
+    font-size: 1.15rem;
     
 }
 
@@ -205,7 +206,7 @@ body {
     align-items: center;
     font-family: "Comic Sans MS", "Comic Sans";
     font-weight: 900;
-    -webkit-text-stroke: 1px;
+    -webkit-text-stroke: 1.5px;
 }
 
 #C {
