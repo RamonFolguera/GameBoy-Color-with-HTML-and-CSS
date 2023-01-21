@@ -9,7 +9,9 @@
 }
 
 body {
-    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 .container {
@@ -366,6 +368,7 @@ body {
 .bottom-section-container {
     display:flex;
     justify-content: flex-end;
+    align-items:flex-end;
     height: 50%;
 }
 
@@ -376,6 +379,7 @@ body {
     justify-content:flex-end;
     width: 33%;
     height:70%;
+    margin-bottom: 30px;
     
 }
 
@@ -423,13 +427,20 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    width: 33%;
-    height:100%;
-    border: 1px black solid;
+    width: 20%;
+    height:50%;
+    transform: skewy(-10deg);
+    margin: 0 10px 10px 45px;
+    
 }
 
-.dot- {
-    width:5px;
-    height:5px;
+.dot {
+    width:4px;
+    height:4px;
+    border-radius: 50%1px;
     border: 1px solid black;
+}
+
+.dot-open {
+    background-color: black;
 }
