@@ -170,17 +170,26 @@ body {
 }
 
 .display-container {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    position:relative;
     margin: 0 auto 10px auto;
     height: 154px;
     width: 170px;
     background-color: #6B7767;
     box-shadow: inset 0px 0px 2px 2px black;
 }
+canvas {
+    width: inherit;
+    height: inherit;
+}
+
+
 video {
-    margin-bottom: 20px;
+   
+    left: 5px;
+    position:absolute;
+    margin-bottom: 200px;
+    width: 95%;
+    height: inherit;
 }
 
 /* gameboycolor contiene toda el título GAMEBOYCOLOR y se divide en GAMEBOY y en COLOR. COLOR a su vez se divide en letras  */

@@ -149,4 +149,6 @@ const randomFoodLocation = () => {
     
 }
 
-loadGame();
+
+
+// loadGame();
