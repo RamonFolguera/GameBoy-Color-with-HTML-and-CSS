@@ -25,14 +25,15 @@ Funciones:
 // Coger elementos que necesitamos del DOM y almacenarlos en variables:
 const displayContainer = document.querySelector('.display-container');
 const startBtn= document.querySelector('#start-button');
-
 //Creamos el <video> element
 const videoElement = document.createElement('video');
 videoElement.setAttribute('width','160');
 videoElement.setAttribute('height','154');
 videoElement.setAttribute('src','./video/Game Boy Advance SP Intro HD (60fps).mp4');
 videoElement.setAttribute('type','video/mp4');
+
 console.log(displayContainer)
+ 
 
 //añadimos el video al div: display-container
 
@@ -44,11 +45,18 @@ console.log(displayContainer)
 const startConsole = () => {
     const videoDiv = displayContainer.appendChild(videoElement);
     displayContainer.style.background = "#bebebe";
-    videoElement.play() 
-    
-    // loadGame();
+    videoElement.play(); 
+    timeout();
 };
 
+const timeout = () => {
+    setTimeout(removeVideo, 6000);
+}
+    
+
+const removeVideo = () => {
+    document.querySelector('video').remove();
+}
 
 
 //SCRIPT DEL SNAKE
@@ -66,7 +74,7 @@ usamos const o let dependiendo de si la variable se actualizará más tarde o no
 const blockSize = 25;
 const rows = 20;
 const cols = 20;
-let board = document.querySelector('.display-container');
+let board = document.getElementById('display-container');
 let context = board.getContext('2d');
 
 
@@ -119,7 +127,7 @@ const update = () => {
 
 
     // dibujamos el tablero entero fillRect (esquina top left, esquina bottom right)
-    context.fillStyle = 'black';
+    context.fillStyle = "#bebebe";
     context.fillRect(0, 0, board.width, board.height);
 
     // dibujamos la comida
@@ -202,7 +210,11 @@ const randomFoodLocation = () => {
     
 }
 
+//aquí llamamos a la función para que cargue el juego.
 
+const delayLoadGame = () => {
+    setTimeout(loadGame, 6000);
+}
 
 
 

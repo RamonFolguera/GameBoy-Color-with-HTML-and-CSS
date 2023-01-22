@@ -48,7 +48,9 @@
                 <!-- DISPLAY es la parte del screen donde aparece el videojuego -->
 
                 <div class="display-container">
-                    <canvas id="display-container"></canvas>
+                    <canvas id="display-container">
+
+                    </canvas>
                     
                     
                 </div>
@@ -106,7 +108,7 @@
                         <button id="select-button"></button>
                         <button 
                         id="start-button"
-                        onclick = "startConsole()"
+                        onclick = "startConsole(); delayLoadGame();timeout();"
                     ></button>
                     </div>
                     <div class="select-start-titles-container">
