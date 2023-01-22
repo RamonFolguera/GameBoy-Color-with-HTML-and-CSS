@@ -41,18 +41,17 @@ body {
 .container:after {
     content:'';
     height: 50px;
-    width: 294px;
+    width: 295px;
     background: var(--casin-base);
     position: absolute;
     margin: auto;
     top: 473px;
-    left:0.5px;
+    left:0.57px;
     border-radius: 50%;
     z-index: -1;
     box-shadow:0px 4px 0px #E8A705;
     border-bottom: 2px solid #fff5d9c9;
-    overflow: hidden;
-
+    
 }
 
 
@@ -119,7 +118,7 @@ body {
     border: 1px solid black;
     z-index: 3;
     /* box-shadow: 0px 0px 10px 1px rgba(220, 8, 8, 0.929);  */
-    /* box shadow activarse al encender la consola */
+    /* box shadow activarse al encender la consola en JS*/
 }
 
 .power-halfmoons-container {
