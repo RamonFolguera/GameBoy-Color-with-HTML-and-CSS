@@ -205,6 +205,7 @@ const changeDirection = (e) => {
     }
 }
 
+// Función para los botones de dirección de la consola añadiendo el onclick en el html
 
 const upBtn = () => {
     if (speedY != 1) {
