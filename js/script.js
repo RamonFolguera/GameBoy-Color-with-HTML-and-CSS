@@ -11,6 +11,12 @@ Funciones:
 
 - startConsole()
 
+3. Si clickeas un botón que no sea START antes de encender la pantalla... que salga un alert diciendo que tienes que apretar START primero para empezar el juego
+
+4. Introducir un juego.
+
+
+
 */
 
 
