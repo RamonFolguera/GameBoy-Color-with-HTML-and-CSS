@@ -8,7 +8,7 @@ Después pensar detenidamente me decido por crear una GameBoyColor. Un clásico 
 
 |Diseño GameBoy en HTML y CSS|Añadido en JS video de inicio|Añadido en JS juego básico del Snake|
 |-|-|-|
-|![image](https://user-images.githubusercontent.com/53578007/213930435-7a8edcff-ffc7-42d9-ac40-fec8726a47c5.png)|![image](https://user-images.githubusercontent.com/53578007/213930468-3e2bb6e4-a2b0-49a5-b886-419cb33e4d76.png)|![image](https://user-images.githubusercontent.com/53578007/213930714-9de792c1-a655-4bac-ac45-1f9481170384.png)|
+|![image](https://user-images.githubusercontent.com/53578007/213937156-fd5b7b60-2c25-4f61-989a-ca89c751ae01.png)|![image](https://user-images.githubusercontent.com/53578007/213937401-093c6afa-c1e0-456c-a948-7fecde79817f.png)|![image](https://user-images.githubusercontent.com/53578007/213937457-7f027b67-d3b2-47f2-9cd5-6c5f3171f17a.png)|
 
 
 ##### ¿Cómo funciona?
