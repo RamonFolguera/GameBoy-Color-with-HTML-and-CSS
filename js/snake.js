@@ -13,7 +13,7 @@ usamos const o let dependiendo de si la variable se actualizará más tarde o no
 const blockSize = 25;
 const rows = 20;
 const cols = 20;
-let board = document.getElementById('board');
+let board = document.querySelector('.display-container');
 let context = board.getContext('2d');
 
 
@@ -57,9 +57,9 @@ const update = () => {
 
 
 // creamos una funcion para que nos coloque la comida randomly en el tablero
-const randomFoodLocation () => {
-    // foodX = Math.floor(Math.random() * cols) * blockSize; 
-    foodY = Math.floor(Math)
-}
+// const randomFoodLocation () => {
+//     foodX = Math.floor(Math.random() * cols) * blockSize; //el metodo .floor nos redondea el numero que obtenemos randomly para que sea entero
+//     foodY = Math.floor(Math.random() * rows) * blockSize;
+// }
 
 loadGame();
