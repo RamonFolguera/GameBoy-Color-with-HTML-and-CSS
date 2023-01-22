@@ -292,18 +292,7 @@ video {
 
 
 
-/* #cross path{
-    box-shadow: 2px 2px 2px 2px var();
-} */
 
-/* Para crear la sombra de la cruz */
-/* #cross {
-    position: absolute;
-    top:20px;
-    left:30px;
-    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-} */
 
 /* before y after para que las sombras queden por debajo */
 .cross-container::after {
@@ -354,6 +343,78 @@ video {
     height: 60px;
     z-index: 1;
 }
+#top-vertical-rect {
+    width:100%;
+    height:30px;
+    cursor:pointer;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+}
+
+#top-vertical-rect:active {
+    background: linear-gradient(to bottom,#1c2028 30%,var(--buttons-base) 70%);
+}
+#bottom-vertical-rect {
+    width:100%;
+    height:30px;
+    cursor:pointer;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#bottom-vertical-rect:active {
+    background: linear-gradient(to top,#1c2028 30%,var(--buttons-base) 70%);
+}
+
+#horizontal-rect {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 35px;
+    left: 10px;
+    width: 60px;
+    height: 19px;
+    z-index: 1;
+}
+
+#left-horizontal-rect {
+    width:19px;
+    height:100%;
+    cursor:pointer;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#left-horizontal-rect:active {
+    background: linear-gradient(to right,#1c2028 30%,var(--buttons-base) 70%);
+}
+
+#right-horizontal-rect {
+    width:19px;
+    height:100%;
+    cursor:pointer;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#right-horizontal-rect:active {
+    background: linear-gradient(to left,#1c2028 30%,var(--buttons-base) 70%);
+}
+
+
  /* Ubicación de las flechas */
 
 .fa-sort-down, .fa-sort-up, .fa-caret-left, .fa-caret-right {
@@ -388,13 +449,6 @@ video {
 
 
 
-#horizontal-rect {
-    top: 35px;
-    left: 10px;
-    width: 60px;
-    height: 19px;
-    z-index: 1;
-}
 
 #center-circle {
     background: radial-gradient(#5E6968,#1F222B);
@@ -423,10 +477,13 @@ video {
     border-bottom: 1.5px  solid var(--button-highlights);
 }
 
+
+
 #button-B, #button-A {
     height: 30px;
     width: 30px;
     border-radius: 50%;
+
 }
 
 #button-B {
@@ -444,10 +501,23 @@ video {
 #button-B p, #button-A p {
     font-size: 1.3rem;
     text-align: center;
-    margin-top: 4px;
+    margin-top: 2px;
     margin-right: 5px;
     color: var(--buttons-base);
     text-shadow: 0px -1px  var(--button-highlights);
+}
+
+/* Modificación de los botones para que parezca que se aprieta cuando hacemos click con el pseudónimo :active */
+
+#button-B:active, #button-A:active, #select-button:active, #start-button:active {
+    border-width: 0;
+    box-shadow: 0px 0px 0px 1px black, 0px 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    /* border-bottom: 0; */
+}
+
+#button-B p:active, #button-A p:active {
+    margin-top: 4px;
+    
 }
 
 .bottom-section-container {
@@ -481,9 +551,12 @@ video {
     border-radius: 40%;
     width: 34%;
     height:25%;
-
+    background: linear-gradient(to bottom, var(--buttons-base),var(--button-highlights));
+    
 }
-
+#select-button:active, #start-button:active {
+    background:  var(--buttons-base);
+}
 
 .select-start-titles-container {
     display: flex;
