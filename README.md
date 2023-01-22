@@ -13,16 +13,16 @@ Después pensar detenidamente me decido por crear una GameBoyColor. Un clásico 
 
 ##### ¿Cómo funciona?
 
-
 Los botones se accionan al clickar con el ratón encima gracias a la pseudo-clase de CSS :active.
 
-Para encender la videoconsola clickamos el botón START. Esto activará la parte de JS programada para que el video de inicio aparezca y desaparezca a los 6 segundos con el método setTimeout, justo cuando está programado que el juego empiece.
+Para encender la videoconsola clickamos el botón START. Esto activará la parte de JS programada para que el video de inicio aparezca y desaparezca a los 5 segundos con el método setTimeout, justo cuando está programado que el juego empiece. Además, la luz roja de POWER se enciende también al presionar el botón de START.
+
+Para empezar a jugar mueve la serpiente con las flechas de dirección del teclado o de la consola.
+
 
 ##### ¿Cómo jugar?
 
 La serpiente es el cuadrado verde al empezar. La comida es el cuadrado rojo.
-
-Para empezar a jugar mueve la serpiente con las flechas del teclado.
 
 Continúa alimentando la serpiente con los cuadrados rojos que reaparecen aleatoriamente cada vez que comes uno. La serpiente crecerá un cuadrado cada vez.
 
