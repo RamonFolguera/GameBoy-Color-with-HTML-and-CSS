@@ -37,20 +37,20 @@ const displayContainer = document.querySelector('.display-container');
 const startBtn= document.querySelector('#start-button');
 //Creamos el <video> element
 const videoElement = document.createElement('video');
-videoElement.setAttribute('width','160');
-videoElement.setAttribute('height','154');
-videoElement.setAttribute('src','./video/Game Boy Advance SP Intro HD (60fps).mp4');
+videoElement.setAttribute('width','300');
+videoElement.setAttribute('height','200');
+videoElement.setAttribute('src','./video/Gameboy Color intro.mp4');
 videoElement.setAttribute('type','video/mp4');
 
 
 //Encendido del GameBoy
 //Con appendchild colocamos el elemento video dentro del div con class display-container.
-//He añadido un cambio de background para igualar el color de fondo al del video.
+//He añadido un cambio de background para igualar el color de fondo al del video y el juego.
 //cpn .play() encendemos el video.
 
 const startConsole = () => {
     const videoDiv = displayContainer.appendChild(videoElement);
-    displayContainer.style.background = "#bebebe";
+    displayContainer.style.background = "white";
     videoElement.play(); 
     
 };
@@ -133,7 +133,7 @@ const update = () => {
 
 
     // dibujamos el tablero entero fillRect (esquina top left, esquina bottom right)
-    context.fillStyle = "#bebebe";
+    context.fillStyle = "white";
     context.fillRect(0, 0, board.width, board.height);
 
     // dibujamos la comida
