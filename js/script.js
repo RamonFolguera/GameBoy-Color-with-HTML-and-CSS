@@ -46,7 +46,7 @@ const startConsole = () => {
     const videoDiv = displayContainer.appendChild(videoElement);
     displayContainer.style.background = "#bebebe";
     videoElement.play(); 
-    timeout();
+    
 };
 
 const timeout = () => {
