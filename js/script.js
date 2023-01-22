@@ -170,14 +170,14 @@ const update = () => {
     // si toda cualquier borde del tablero = gameover = true
     if (snakeX < 0 || snakeX > cols*blockSize || snakeY < 0 || snakeY > rows*blockSize) {
         gameOver = true;
-        alert('Game Over');
+        alert('Game Over. Actualiza la página y haz click en START para jugar otra vez.');
     }
 
     // si se come a sí misma = gameover = true    
     for (let i = 0; i < snakeBody.length; i++)
         if(snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
-            alert('Game Over');
+            alert('Game Over. Actualiza la página y haz click en START para jugar otra vez.');
         }
 
 }
@@ -204,6 +204,36 @@ const changeDirection = (e) => {
         speedY = 0;
     }
 }
+
+
+const upBtn = () => {
+    if (speedY != 1) {
+        speedX = 0;
+        speedY = -1;
+    }
+}
+
+const downBtn = () => {
+    if (speedY != -1) {
+        speedX = 0;
+        speedY = 1;
+    }
+}
+
+const leftBtn = () => {
+    if (speedY != 1) {
+        speedX = -1;
+        speedY = 0;
+    }
+}
+
+const rightBtn = () => {
+    if (speedY != -1) {
+        speedX = 1;
+        speedY = 0;
+    }
+}
+
 
 
 
