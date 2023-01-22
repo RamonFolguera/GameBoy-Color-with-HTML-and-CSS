@@ -18,7 +18,16 @@ Los botones se accionan al clickar con el ratón encima gracias a la pseudo-clas
 
 Para encender la videoconsola clickamos el botón START. Esto activará la parte de JS programada para que el video de inicio aparezca y desaparezca a los 6 segundos con el método setTimeout, justo cuando está programado que el juego empiece.
 
-Cuando falles tocando cualquiera de las cuatro paredes con la serpiente, o ésta se coma a sí misma saldrá un alert de GAME OVER.
+##### ¿Cómo jugar?
+
+La serpiente es el cuadrado verde al empezar. La comida es el cuadrado rojo.
+
+Para empezar a jugar mueve la serpiente con las flechas del teclado.
+
+Continúa alimentando la serpiente con los cuadrados rojos que reaparecen aleatoriamente cada vez que comes uno. La serpiente crecerá un cuadrado cada vez.
+
+Cuando falles tocando cualquiera de las cuatro paredes con la cabeza de la serpiente, o ésta se coma a sí misma saldrá un alert de GAME OVER.
+
 Para volver a empezar hay que actualizar la página de momento.
 
 

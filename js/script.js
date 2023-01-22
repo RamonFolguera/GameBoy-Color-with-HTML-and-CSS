@@ -7,16 +7,26 @@ Tareas para hacer la consola interactiva:
 
 <video width="160" height="154" controls src="./video/Game Boy Advance SP Intro HD (60fps).mp4" type="video/mp4"></video>
 
-Funciones:
 
-- startConsole()
 
 3. Si clickeas un botón que no sea START antes de encender la pantalla... que salga un alert diciendo que tienes que apretar START primero para empezar el juego
 
-4. Introducir un juego.
+4. Introducir un juego básico de la serpiente.
 
-5. Que el juego aparezca después de la presentación de inicio
+5. Que el juego aparezca después de la presentación de inicio:
 
+    con un setTimeout y el metodo remove() borro el video cuando se acaba y empieza el juego a los 6s.
+
+Funciones:
+
+- startConsole() - se enciende la consola y empieza el video de inicio.
+- timeout() - Activa el setTimeout con la función removeVideo()
+- removeVideo() - elimina del DOM el elemento <video> que se crea al clickar START.
+- loadGame() - activa el juego.    
+- update()  - crea un nuevo tablero en el canvas cada vez que se cumple una condición (cada vez que se cambian las coordenadas de la serpiente o se enciende el juego dando el efecto de movimiento continuo de la serpiente)
+- changeDirection() - cambia la dirección de la cabeza de la serpiente.
+- randomFoodLocation() - coloca el cuadrado rojo en unas coordenadas aleatorias cada vez que el juego comienza o la serpiente come.
+- delayLoadGame() - retrasa el inicio del juego 6s para empezar después del video de inicio.
 
 
 */
@@ -32,15 +42,11 @@ videoElement.setAttribute('height','154');
 videoElement.setAttribute('src','./video/Game Boy Advance SP Intro HD (60fps).mp4');
 videoElement.setAttribute('type','video/mp4');
 
-console.log(displayContainer)
- 
-
-//añadimos el video al div: display-container
-
-
-
 
 //Encendido del GameBoy
+//Con appendchild colocamos el elemento video dentro del div con class display-container.
+//He añadido un cambio de background para igualar el color de fondo al del video.
+//cpn .play() encendemos el video.
 
 const startConsole = () => {
     const videoDiv = displayContainer.appendChild(videoElement);
@@ -219,5 +225,4 @@ const delayLoadGame = () => {
 
 
 
-console.log('hello, como estas')
 
