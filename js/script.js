@@ -23,11 +23,11 @@ Funciones:
 - timeout() - Activa el setTimeout con la función removeVideo()
 - removeVideo() - elimina del DOM el elemento <video> que se crea al clickar START.
 - loadGame() - activa el juego.    
-- update()  - crea un nuevo tablero en el canvas cada vez que se cumple una condición (cada vez que se cambian las coordenadas de la serpiente o se enciende el juego dando el efecto de movimiento continuo de la serpiente)
+- update()  - crea un nuevo tablero en el canvas cada 100 milisegundos dando el efecto de movimiento continuo de la serpiente)
 - changeDirection() - cambia la dirección de la cabeza de la serpiente.
 - randomFoodLocation() - coloca el cuadrado rojo en unas coordenadas aleatorias cada vez que el juego comienza o la serpiente come.
 - delayLoadGame() - retrasa el inicio del juego 6s para empezar después del video de inicio.
-
+- turnOnLight() - encendido de la luz roja de power al empezar la consola
 
 */
 
@@ -43,16 +43,28 @@ videoElement.setAttribute('src','./video/Gameboy Color intro.mp4');
 videoElement.setAttribute('type','video/mp4');
 
 
+//Encendido de la luz roja cuando activamos startConsole
+//seleccionamos el div del DOM. Atribuimos estilo
+
+const turnOnLight = () => {
+    const powerLightDiv = document.querySelector('#power-light');
+    const colorLightAttr = powerLightDiv.style.background = 'red';
+    const shadowLightAttr = powerLightDiv.style.boxShadow = '0px 0px 10px 1px rgba(220, 8, 8, 0.929)';
+    
+}
+
+
 //Encendido del GameBoy
 //Con appendchild colocamos el elemento video dentro del div con class display-container.
 //He añadido un cambio de background para igualar el color de fondo al del video y el juego.
-//cpn .play() encendemos el video.
+//con .play() encendemos el video.
+//con turOnLight encendemos la luz de power
 
 const startConsole = () => {
     const videoDiv = displayContainer.appendChild(videoElement);
     displayContainer.style.background = "white";
     videoElement.play(); 
-    
+    turnOnLight();
 };
 
 const timeout = () => {
@@ -118,16 +130,16 @@ const loadGame = () => {
     document.addEventListener('keyup', changeDirection);
     // update();
     setInterval(update, 1000/10);
-    //cada 100 milisegundos actualiza el tablero (context). Por cada movimiento se actualiza y crea tablero nuevo
+    //cada 100 milisegundos actualiza el tablero (context). 
 
 }
 
-/* para actualizar el tablero */
+/* Para actualizar el tablero */
 
 const update = () => {
 
     if (gameOver) {
-    
+        
         return;
     }
 
@@ -250,7 +262,7 @@ const randomFoodLocation = () => {
 //aquí llamamos a la función para que cargue el juego.
 
 const delayLoadGame = () => {
-    setTimeout(loadGame, 6000);
+    setTimeout(loadGame, 5000);
 }
 
 

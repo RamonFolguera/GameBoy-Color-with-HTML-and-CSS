@@ -112,14 +112,14 @@ body {
 }
 
 #power-light {
-    background-color: red;
+    background-color: rgb(45, 8, 8);
     border-radius: 50%;
     width: 9px;
     height:9px;
     border: 1px solid black;
-    box-shadow: 0px 0px 10px 1px rgba(220, 8, 8, 0.929); 
     z-index: 3;
-    /* box shadow activarse al encender la consola? */
+    /* box-shadow: 0px 0px 10px 1px rgba(220, 8, 8, 0.929);  */
+    /* box shadow activarse al encender la consola */
 }
 
 .power-halfmoons-container {
