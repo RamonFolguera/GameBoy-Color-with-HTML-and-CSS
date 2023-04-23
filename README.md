@@ -10,7 +10,7 @@ Después pensar detenidamente me decido por crear una GameBoyColor. Un clásico 
 |-|-|-|
 |![image](https://user-images.githubusercontent.com/53578007/213937156-fd5b7b60-2c25-4f61-989a-ca89c751ae01.png)|![image](https://user-images.githubusercontent.com/53578007/213937401-093c6afa-c1e0-456c-a948-7fecde79817f.png)|![image](https://user-images.githubusercontent.com/53578007/213937457-7f027b67-d3b2-47f2-9cd5-6c5f3171f17a.png)|
 
-
+[GameBoyColor.webm](https://user-images.githubusercontent.com/53578007/233836556-2a8ab98f-cebf-4dda-8172-7b4624540886.webm)
 ##### ¿Cómo funciona?
 
 Los botones se accionan al clickar con el ratón encima gracias a la pseudo-clase de CSS :active.
@@ -18,6 +18,7 @@ Los botones se accionan al clickar con el ratón encima gracias a la pseudo-clas
 Para encender la videoconsola clickamos el botón START. Esto activará la parte de JS programada para que el video de inicio aparezca y desaparezca a los 5 segundos con el método setTimeout, justo cuando está programado que el juego empiece. Además, la luz roja de POWER se enciende también al presionar el botón de START.
 
 Para empezar a jugar mueve la serpiente con las flechas de dirección del teclado o de la consola.
+
 
 
 ##### ¿Cómo jugar?
